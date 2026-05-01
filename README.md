@@ -1,56 +1,34 @@
 # Financial Portfolio Analysis with Python 📈
 
 ## Overview
-This project analyzes the behavior of financial assets using real market data. The objective is to evaluate **returns**, **volatility**, and **correlation**, and to understand how diversification impacts portfolio risk.
-
----
-
-## 📁 Project Structure
-The repository contains two main analyses:
-
-### 1. Two-Asset Portfolio
-*   **Assets:** Apple (AAPL) and Microsoft (MSFT).
-*   **Objective:** Analyze correlation and demonstrate the limitations of diversification when assets belong to the same sector.
-
-### 2. Multi-Asset Portfolio
-*   **Assets:**
-    *   **AAPL** (Technology)
-    *   **MSFT** (Technology)
-    *   **XOM** (Energy)
-    *   **GLD** (Defensive asset)
-    *   **SPY** (Market benchmark)
-*   **Objective:** Evaluate how diversification across different sectors reduces total portfolio risk.
-
----
-
-## ⚙️ Methodology
-1.  **Data extraction:** Using the `yfinance` library.
-2.  **Transformation:** Converting prices into daily returns.
-3.  **Calculations:**
-    *   Mean returns.
-    *   Volatility (Standard Deviation).
-    *   Correlation matrix.
-4.  **Portfolio Construction:** Building an equally weighted portfolio.
-5.  **Risk Analysis:** Evaluating the impact of asset combinations.
-
----
+This project presents a quantitative analysis of financial assets using real market data.  
+The goal is to evaluate **returns, volatility, and correlation**, and to demonstrate how diversification improves the risk-return profile of a portfolio.
 
 ## 📊 Key Findings
-*   **Sector Correlation:** Technology stocks (AAPL, MSFT) show high correlation, limiting diversification benefits.
-*   **Defensive Assets:** Gold (GLD) exhibits very low correlation with other assets, acting as a key diversifier.
-*   **Volatility Reduction:** A diversified portfolio significantly reduces volatility compared to individual assets.
+
+*   **High Correlation in Tech:** Apple (AAPL) and Microsoft (MSFT) show strong correlation (~0.70–0.80), limiting diversification benefits.
+*   **Diversification Effect:** Including assets like GLD (Gold) and XOM (Energy) reduces overall portfolio volatility.
+*   **Portfolio Performance:**
+    *   Average daily return: ~0.00082
+    *   Portfolio volatility: ~1.20%
+*   **Risk Reduction:** The diversified portfolio achieves lower volatility compared to individual assets while maintaining reasonable returns.
 
 > [!IMPORTANT]
-> **Key Insight:** Diversification is not about increasing the number of assets, but about combining assets with **low correlation**.
+> **Key Insight:** Effective diversification is driven by **low correlation between assets**, not simply by increasing the number of holdings.
 
----
+## 🧠 Conclusion
 
-## 🛠️ Tools Used
-*   **Language:** Python
-*   **Libraries:** NumPy, Pandas, yfinance
+This analysis highlights that combining assets from different sectors and asset classes
+can significantly improve the risk-return balance of a portfolio.
+
+While individual assets such as AAPL may offer higher returns, they also introduce higher risk.
+In contrast, a diversified portfolio reduces volatility without proportionally sacrificing returns.
+
+This demonstrates a fundamental principle in finance:  
+**portfolio construction is more about correlation than individual performance.**
 
 ## 🚀 Future Improvements
-*   [ ] Portfolio optimization (Mean-Variance).
-*   [ ] Sharpe ratio calculation.
-*   [ ] Monte Carlo simulations for price forecasting.
 
+*   Portfolio optimization (Mean-Variance framework)
+*   Sharpe ratio evaluation
+*   Monte Carlo simulations for risk analysis
